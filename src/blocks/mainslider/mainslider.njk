@@ -1,0 +1,18 @@
+{% set carousel = [
+	{
+		"img": "./images/cow.jpg",
+		"alt": "Дети"
+	},
+	{
+		"img": "./images/ds.jpg",
+		"alt": "Дети"
+	}
+]%}
+
+<ul class="mainslider carousel">
+	{% for item in carousel %}
+		<li class="mainslider-item">
+			<img src="{{item.img}}" alt="">
+		</li>
+	{% endfor %}
+</ul>

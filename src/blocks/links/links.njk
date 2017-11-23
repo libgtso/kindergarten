@@ -1,0 +1,27 @@
+{% set list = [
+	{
+		"name": "Официальный интернет-портал государственных услуг",
+		"link": "https://www.gosuslugi.ru/"
+	},
+	{
+		"name": "Органы власти субъектов Российской Федерации - навстречу людям",
+		"link": "http://rusregioninform.ru/organy-vlasti-navstrechu-lyudyam"
+	},
+	{
+		"name": "Органы власти субъектов Российской Федерации - навстречу людям",
+		"link": "http://rusregioninform.ru/organy-vlasti-navstrechu-lyudyam"
+	}
+]%}
+
+<div class="links wrapper">
+	<h4 class="links-title">
+		Ссылки
+	</h4>
+	<ul class="links-list">
+		{% for item in list %}
+			<li class="links-list__item">
+				<a href="{{item.link}}">{{item.name}}</a>
+			</li>
+		{% endfor %}
+	</ul>
+</div>

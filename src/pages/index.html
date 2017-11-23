@@ -1,0 +1,11 @@
+{% extends 'base/base.njk' %}
+
+{% set title = "Сайт образовательного учреждения" %}
+
+{% block title %}{{title}}{% endblock %}
+
+{% block content %}
+	{% include 'mainslider/mainslider.njk' %}
+	{% include 'welcome/welcome.njk' %}
+	{% include 'newonsite/newonsite.njk' %}
+{% endblock %}

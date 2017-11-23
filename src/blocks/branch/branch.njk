@@ -1,0 +1,24 @@
+{% set table = [
+	{
+		"desc": 'Руководитель филиала',
+		"info": 'впрвпр'
+	},
+	{
+		"desc": 'Адрес',
+		"info": 'апрвпр'
+	}
+]%}
+
+<div class="branch">
+	<h2 class="branch-title title">рпорм</h2>
+	{% for item in table %}
+		<table cellspacing="0" cellpadding="3">
+			<tbody>
+				<tr>
+					<td class="branch-desc">{{item.desc}}</td>
+					<td class="branch-info">{{item.info}}</td>
+				</tr>
+			</tbody>
+		</table>
+	{% endfor %}
+</div>

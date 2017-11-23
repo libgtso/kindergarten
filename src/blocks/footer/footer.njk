@@ -1,0 +1,100 @@
+{% set menu = [
+	{
+		"itemlist": "Сведения об образовательной организации",
+		"link": "./about"
+	},
+	{
+		"itemlist": "Новости",
+		"link": "./news.html"
+	},
+	{
+		"itemlist": "Детский сад",
+		"link": "./childgarten"
+	},
+	{
+		"itemlist": "Проекты",
+		"link": "./projects"
+	},
+	{
+		"itemlist": "Фотоальбом",
+		"link": "./photoalbums"
+	},
+	{
+		"itemlist": "Контакты",
+		"link": "./contacts",
+		"active": 'active'
+	}
+]%}
+
+{% set link = [
+	{
+		"title": "Дискуссионный клуб Минобр науки России",
+		"link": "http://club.mon.gov.ru/"
+	}
+]%}
+
+{% set interview = [
+	{
+		"name": "вариант 1",
+		"value": "1",
+		"id": "id1"
+	},
+	{
+		"name": "вариант 2",
+		"value": "2",
+		"id": "id1"
+	},
+	{
+		"name": "вариант 3",
+		"value": "3",
+		"id": "id1"
+	}
+]%}
+
+<div class="footer">
+	<div class="footer-top">
+		<ul class="footer-list">
+			{% for item in menu %}
+				<li class="footer-list__item {% if item.active %}header-list__item-{{item.active}}{% endif %}">
+					<a class="footer-list__item-link" href="{{item.link}}">
+						{{item.itemlist}}
+					</a>
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
+	<div class="footer-middle">
+		<div class="footer-link">
+			<ul class="footer-link__list">
+				{% for item in link %}
+					<li class="footer-link__list-item">
+						<a href="{{item.link}}">{{item.title}}</a>
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
+		<div class="footer-interview">
+			<div class="footer-interview__title title">
+				Опрос
+			</div>
+			<span class="footer-interview__name">
+				456
+			</span>
+			<form class="footer-interview__list" action="get">
+				{% for item in interview %}
+					<span class="footer-interview__list-item"><input type="radio" name="{{item.id}}">{{item.name}}</span>
+				{% endfor %}
+				<input class="footer-interview__button button" type="submit" value="Проголосовать">
+			</form>
+			<a class="footer-archive" href="./survey">Архив опросов &raquo</a>
+		</div>
+	</div>
+	<div class="footer-bottom">
+		<div class="footer-bottom__link clearfix">
+			<img src="./images/obr.png" alt="сайтыобразованию.рф">
+			<a href="">
+				Сайт создан на портале сайтыобразованию.рф
+			</a>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,24 @@
+{%set list = [
+	{
+		'link': './news/1',
+		'title': 'Мебель нашей мечты!'
+	}
+]%}
+
+<div class="news">
+	<h1 class="news-title title end-line">
+		Новости
+	</h1>
+	<div class="news-announce">
+		<ul class="news-list">
+			{% for item in list %}
+				<li class="news-list__item">
+					<div class="news-icon"></div>
+					<div class="news-announce__caption">
+						<a href="{{item.link}}">{{item.title}}</a>
+					</div>
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
+</div>

@@ -1,0 +1,250 @@
+@import "var";
+
+html, body{
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+body {
+    background: url(../images/bg-up.png) center top no-repeat,
+    url(../images/bg-down.png) center bottom no-repeat,
+    url(../images/bg-common.png);
+    background-size: auto, auto, cover;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-size: 24px;
+    color: #037fd2;
+    margin: 15px;
+}
+
+.title {
+    font-size: 24px;
+}
+
+a{
+    color: @c-link;
+}
+
+img {
+    border: 0;
+    vertical-align: top;
+}
+
+.page{
+    color: @c-black;
+    font: 14px/1.7 'Tahoma', Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    -webkit-focus-ring-color: rgba(255, 255, 255, 0);
+    outline: none;
+}
+
+.icon{
+    &-sprite{
+        position: absolute;
+        width: 0;
+        height: 0;
+        top: -1000px;
+    }
+}
+
+.clearfix:before,
+.clearfix:after {
+    content:"";
+    display:table;
+    width: 100%;
+}
+.clearfix:after {
+    clear:both;
+}
+
+.column {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.carousel {
+    overflow: hidden;
+}
+
+.owl-item {
+    display: inline-block;
+}
+
+.form {
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 978px;
+    margin: auto;
+}
+
+ul, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.button {
+    border:none;
+    padding: 6px 15px;
+    border-radius: 20px;
+}
+
+.wrapper {
+        border: 2px solid #fff;
+        outline: 2px solid #dbdbdb;
+        background: rgb(219,229,238);
+        background: -moz-linear-gradient(top, rgb(219,229,238) 0%, rgb(250,251,253) 100%);
+        background: -webkit-linear-gradient(top, rgb(219,229,238) 0%,rgb(250,251,253) 100%);
+        background: linear-gradient(to bottom, rgb(219,229,238) 0%,rgb(250,251,253) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dbe5ee', endColorstr='#fafbfd',GradientType=0 );
+}
+
+.menu-click {
+        color: #6e7da4;
+        border-bottom: 1px dashed #6e7da4;
+        cursor: pointer;
+        font-size: 14px;
+        font-family: 'Tahoma';
+    }
+
+.field {
+    background: #fff;
+}
+
+.clear {
+    display: block;
+    height: 0px;
+    width: 100% !important;
+    margin: 0;
+    padding: 0;
+    clear: both;
+    line-height: 0px;
+    font-size: 0px;
+}
+
+.greyfield {
+    background: #f2f2f2;
+    padding: 15px 5px 15px 0;
+    margin-right: 5px;
+}
+
+.content {
+    margin-right: 310px;
+}
+
+.end-line {
+    border-bottom: 1px solid #d0d0d0;
+    padding-bottom: 10px;
+}
+
+.uplink {
+    position: fixed;
+    bottom: 100px;
+    left: 50%;
+    margin-left: -580px;
+    text-decoration: none;
+    height: 100px;
+    width: 74px;
+    display: none;
+
+    & > span {
+        color: #0d4e66;
+        margin: 0 3px;
+        font-family: 'Verdana';        
+    }
+
+    & > img {
+        display: block;
+        margin-bottom: 10px;
+    }
+}
+
+.popuplayer {
+    background: #bbcadf;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 19;
+    overflow: auto;
+    animation: fade 0.6s;
+    opacity: .4;
+    display: none;
+}
+
+.mainpopup {
+    width: 470px;
+    height: 345px;
+    background: #fff;
+    position: fixed;
+    z-index: 20;
+    left: 50%;
+    margin-left: -233px;
+    top: 33%;
+    text-align: center;
+    display: none;
+
+
+    &-attention {
+        padding-top: 100px;
+        display: block;
+        background: url(../images/monitor.png) 50% 50% no-repeat;
+        color: #1d5095;
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    &-welcome {
+        color: #1d5095;
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 45px;
+    }
+
+    &-vote,
+    &-away {
+        color: #fff;
+        text-decoration: none;
+        width: 157px;
+        height: 37px;
+        display: inline-block;
+        background: #a91717;
+        border-radius: 20px;
+        line-height: 2.5;
+        cursor: pointer;
+        margin-right: 10px;
+    }
+
+    &-close {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        cursor: pointer;
+
+        &:before,
+        &:after {
+            position: absolute;
+            height: 40px;
+            width: 2px;
+            background: #a1b5d6;
+            content: '';
+        }
+
+        &:before {
+            transform: rotate(45deg);
+        }
+
+        &:after {
+            transform: rotate(-45deg);
+        }
+    }
+}

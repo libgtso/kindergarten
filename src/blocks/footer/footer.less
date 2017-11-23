@@ -1,0 +1,133 @@
+.footer {
+	margin-bottom: 20px;
+
+	&-list{
+		background-color: #9fc3f3;
+		text-align: center;
+		
+
+		&__item {
+			display: inline-block;
+
+			&-link {
+				color: #000;
+				text-decoration: none;
+				padding: 14px 20px;
+				display: block;
+				font-family: 'Tahoma';
+
+				&:hover {
+					background: rgb(168,130,155);
+					background: -webkit-linear-gradient(rgb(168,130,155) 0%, rgb(129,73,111) 100%);
+					background: -o-linear-gradient(rgb(168,130,155) 0%, rgb(129,73,111) 100%);
+					background: linear-gradient(rgb(168,130,155) 0%, rgb(129,73,111) 100%);
+					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a8829b', endColorstr='#81496f',GradientType=0 );
+				}
+			}
+		}
+	}
+
+	&-middle {
+		background: #80a3c3;
+		display: table;
+		width: 100%;
+	}
+
+	&-link {
+		width: 350px;
+		padding-top: 30px;
+		padding-bottom: 20px;
+		display: table-cell;
+		
+
+		&__list-item {
+			line-height: 1.5;
+			margin: 0 20px 0 30px;
+
+				& > a {
+				color: #fff;
+				font-family: 'Verdana';
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+
+	&-interview {
+			background: #597288;
+			margin-left: 350px;
+			padding-left: 50px;
+			padding-bottom: 40px;
+			display: table-cell;
+
+			&__title {
+				color: #fff;
+				padding: 30px 0 22px;
+				font-family: 'Verdana';
+			}
+
+			&__name {
+				color: #fff;
+				font-family: 'Verdana';
+				font-size: 18px;
+			}
+
+			&__list {
+				margin-top: 15px;
+				padding-right: 50px;
+
+				&-item {
+					display: block;
+					margin-bottom: 5px;
+					color: #fff;
+				}
+			}
+
+			&__button {
+				margin-top: 15px;
+				font-family: 'Tahoma';
+				font-size: 14px;
+				cursor: pointer;
+			}
+		}
+
+		&-archive {
+			margin-top: 8px;
+			display: block;
+			color: #e7ebca;
+			font-size: 13px;
+			text-decoration: none;
+			width: 140px;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+
+	&-bottom {
+		background: #003249;
+		height: 100px;
+		width: 100%;
+		border-bottom-right-radius: 20px;
+		border-bottom-left-radius: 20px;
+		padding-bottom: 60px;
+
+		&__link {
+			float: right;
+			padding-top: 87px;
+			margin-right: 25px;
+
+			& > img {
+				vertical-align: middle;
+			}
+
+			& > a {
+				color: #fff;
+				font-size: 11px;
+				text-decoration: none;
+			}
+		}
+	}
+}

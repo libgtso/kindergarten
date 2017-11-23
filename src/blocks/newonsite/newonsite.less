@@ -1,0 +1,142 @@
+.newonsite {
+	margin: 35px 15px 15px 15px;
+
+	&-title {
+		color: #2877ec;
+	}
+
+	&-list {
+		margin: 15px;
+
+		&__item {
+			margin-bottom: 31px;
+			
+			&-hidden {
+				display: none;
+			}
+
+			&-show {
+				text-align: center;
+				background: #d7e9f3;
+				padding: 13px;
+				cursor: pointer;
+				position: relative;
+				margin: 0 16px;
+
+				&:before {
+					content: '';
+					position: absolute;
+					width: 18px;
+					height: 11px;
+					top: 0;
+					left: 50%;
+					background: url(../images/arrow-down-blue.png);
+					margin-left: 130px;
+					top: 25px;
+				}
+
+				& > span {
+					color: #658ca8;
+					border-bottom: 1px dashed #748aa1;
+					font-size: 20px;
+					width: 243px;
+				}
+
+				&:hover {
+					background: #e9f7ff;
+				}
+			}
+		}
+
+		&__img {
+			margin-right: 20px;
+			max-width: 135px;
+			max-height: 135px;
+			min-width: 130px;
+			min-height: 130px;
+			height: auto;
+			width: auto;
+			display: inline-block;
+			vertical-align: bottom;
+		}
+	}
+
+	&-announce {
+		padding-top: 15px;
+		display: inline-block;
+		vertical-align: bottom;
+		width: 480px;
+	}
+
+	&-link {
+		text-decoration: none;
+
+		&__title {
+			color: #2877ec;
+			width: 450px;
+		}
+
+		&:hover span {
+			text-decoration: underline;
+			color:#d43b34;
+		}
+	}
+
+	&-date {
+		position: relative;
+
+		&:before {
+			content:'';
+			position: absolute;
+			background: #deebf1;
+			height: 1px;
+			width: 482px;
+			top: 0px;
+		}
+	}
+	
+	&-number,
+	&-type {
+		display: inline-block;
+		background: #ebf6f8;
+		box-shadow: inset 0px 0px 15px 5px #dbecf6;
+		color: #3c7894;
+		font-family: 'neue', 'Tahoma';
+		font-size: 40px;
+		padding: 5px 10px;
+		vertical-align: bottom;
+	}
+
+	&-type {
+		height: 68px;
+		width: 28px;
+		margin-left: -4px;
+
+		&__news {
+			background: url(../images/types.png) 36% 50% no-repeat;
+		}
+
+		&__project {
+			background: url(../images/types.png) 113% 50% no-repeat;
+		}
+
+		&__event {
+			background: url(../images/types.png) -3% 50% no-repeat;
+		}
+
+		&__album {
+			background: url(../images/types.png) 75% 50% no-repeat;
+		}	
+	}
+
+	&-add {
+		font-family: 'Arial';
+		font-size: 11px;
+		text-transform: uppercase;
+		color: #699aa8;
+		position: absolute;
+		top: 18px;
+		width: 300px;
+		left: 276px;
+	}
+}

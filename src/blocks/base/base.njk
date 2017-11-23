@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+    {% block head %}
+      <title>{% block title %}{% endblock %}</title>
+      <meta charset='utf-8'>
+      <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+      <meta name="description" content=""/>
+      <meta name="keywords" content=""/>
+      <meta name="copyright" content="(c)"> 
+      <meta http-equiv="cleartype" content="on"/>
+      <meta name="format-detection" content="telephone=yes"/>
+      <meta name="format-detection" content="address=no"/>
+      <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+      <link rel="shortcut icon" href="images/scl.png" type="image/png">
+      <link rel="stylesheet" href="style/main.css" />
+    {% endblock %}
+</head>
+<body class="page">
+  <a class="uplink" href="#">
+    <img src="./images/uplink.png" alt="">
+    <span>наверх</span>
+  </a>
+  <div class="popuplayer"></div>
+  <div class="mainpopup">
+    <div class="mainpopup-close"></div>
+    <p class="mainpopup-attention">Внимание</p>
+    <p class="mainpopup-welcome">Приглашаем вас<br>принять участие в оценке качества услуг<br>наших учреждений!</p>
+    <a class="mainpopup-vote" href="./rate">Оценить</a>
+    <span class="mainpopup-away">Нет, позже</span>
+  </div>
+  <div class="container">
+    {% block header %}
+      {% include 'header/header.njk' %}
+    {% endblock %}
+
+    <div class="field clearfix">
+      <div class="sidebar">
+        {% include 'sidebar/sidebar.njk' %}
+    </div>
+    <div class="content">
+      {% block content %}
+      {% endblock %}
+    </div>
+    <div class="clear"></div>
+      {% include 'links/links.njk' %}
+    </div>
+    {% block footer %}
+      {% include 'footer/footer.njk' %}
+    {% endblock %}
+  </div>    
+    <script type="text/javascript" src="vendor/jquery-1.8.2.min.js"></script>
+    {% block script %}{% endblock %}
+    <script src='js/main.js'></script>
+    <script src="vendor/owlcarousel/owl.carousel.min.js"></script>
+    <script src="vendor/calendar.js"></script>
+    <script src="vendor/jquery.cookie.js"></script>
+</body>
+</html>

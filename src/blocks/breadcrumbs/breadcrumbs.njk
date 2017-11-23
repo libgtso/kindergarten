@@ -1,0 +1,9 @@
+<div class="breadcrumbs">
+	<span class="breadcrumbs-first">
+		<a class="breadcrumbs-link" href="./index.html">Главная</a>
+	</span>
+	{% if title %}
+		<span class="breadcrumbs-arrow">&raquo</span>
+		<span class="breadcrumbs-end">{{title}}</span>
+	{% endif %}
+</div>

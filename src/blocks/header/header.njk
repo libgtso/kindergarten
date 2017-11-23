@@ -1,0 +1,80 @@
+{% set menu = [
+	{
+		"itemlist": "Сведения об образовательной организации",
+		"link": "./about.html"
+	},
+	{
+		"itemlist": "Новости",
+		"link": "./news.html"
+	},
+	{
+		"itemlist": "Детский сад",
+		"link": "./childgarten.html"
+	},
+	{
+		"itemlist": "Проекты",
+		"link": "./projects.html"
+	},
+	{
+		"itemlist": "Фотоальбом",
+		"link": "./photoalbums.html"
+	},
+	{
+		"itemlist": "Контакты",
+		"link": "./contacts.html",
+		"active": 'active'
+	}
+]%}
+
+<div class="header">
+	<div class="header-top">
+		<a class="header-link" href="./index.html">
+			<img class="header-logo" src="./images/logo.png" alt="">
+		</a>
+		<div class="header-info">
+			<span class="header-info__name">ДОУ №11</span>
+			<span class="header-info__txt">617000, г. Нытва, Пермский край, ул. Комсомольская, д. 39 +79504472411</span>
+			<ul class="header-links">
+				<li class="header-links__item column">
+					<a href="./index.html" >
+						<span class="header-links__img" title="На главную">
+						</span>
+					</a>
+				</li>
+				<li class="header-links__item column">
+					<a href="./sitemap">
+						<span class="header-links__map" title="Карта сайта">
+						</span>
+					</a>
+				</li>
+				<li class="header-links__item column">
+					<a href="./feedback">
+						<span class="header-links__txt" title="Отправить письмо">
+							Написать письмо
+						</span>
+					</a>
+				</li>
+			</ul>
+			<form class="header-search" action="get">
+				<input class="header-search__input" type="text" placeholder="Поиск по сайту">
+				<input class="header-search__button" type="submit" value="" title="Искать">
+			</form>
+		</div>
+		<div class="header-dontsee">
+			<a href="./themes/blindversion" title="Открыть версию сайта для слабовидящих">Версия для слабовидящих
+			</a>
+		</div>
+		<a href="https://сайтыобразованию.рф/" class="header-out"></a>
+	</div>
+	<div class="header-bottom">
+		<ul class="header-list">
+			{% for item in menu %}
+				<li class="header-list__item {% if item.active %}header-list__item-{{item.active}}{% endif %}">
+					<a class="header-list__item-link" href="{{item.link}}">
+						{{item.itemlist}}
+					</a>
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
+</div>

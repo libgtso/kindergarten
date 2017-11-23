@@ -1,0 +1,14 @@
+{% extends 'base/base.njk' %}
+
+{% set title = 'Контакты' %}
+
+{% block title %}{{title}}{% endblock %}
+
+{% set active = 'header-list__item-active' %}
+
+{% block content %}
+	{% include 'breadcrumbs/breadcrumbs.njk' %}
+	{% include 'contacts/contacts.njk' %}
+	{% include 'branch/branch.njk' %}
+	{% include 'accost/accost.njk' %}
+{% endblock %}

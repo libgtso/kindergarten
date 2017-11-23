@@ -1,0 +1,11 @@
+{% extends 'base/base.njk' %}
+
+{% set title = 'Новости' %}
+
+{% block title %}{{title}}{% endblock %}
+
+{% block content %}
+	{% include 'breadcrumbs/breadcrumbs.njk' %}
+	{% include 'news/news.njk' %}
+	{% include 'newslist/newslist.njk' %}
+{% endblock %}

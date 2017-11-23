@@ -1,0 +1,65 @@
+{% set menu = [
+	{
+		"title": "Обращения граждан",
+		"link": "./treatments",
+		"icon": "icon"
+	},
+	{
+		"title": "Группы детского сада",
+		"link": "./detsad"
+	},
+	{
+		"title": "Азбука безопасности",
+		"link": "./azbuka"
+	},
+	{
+		"title": "Советы специалистов",
+		"link": "./sovety"
+	},
+	{
+		"title": "Музыкальный руководитель",
+		"link": "./info/2015"
+	}
+]%}
+
+{% set hidden = [
+	{
+		"title": "Информация для родителей",
+		"link": "./info/2016"
+	},
+	{
+		"title": "Методические работы",
+		"link": "./metodrab"
+	},
+	{
+		"title": "Прочие документы",
+		"link": "./another"
+	},
+	{
+		"title": "Полезные ссылки",
+		"link": "./usefull"
+	},
+	{
+		"title": "Тест_раздела",
+		"link": "./test"
+	}
+]%}
+
+<div class="menu">
+	<ul class="menu-list">
+		{% for item in menu %}
+			<li class="menu-list__item {% if item.icon %} menu-list__item-{{item.icon}}{% endif %}">
+				<a class="menu-list__item-link" href="{{item.link}}">{{item.title}}</a>
+			</li>
+		{% endfor %}
+	</ul>
+	<span class="menu-click menu-show">развернуть</span>
+	<ul class="menu-list menu-hidden">
+		{% for item in hidden %}
+			<li class="menu-hidden__item">
+				<a class="menu-list__item-link" href="{{item.link}}">{{item.title}}</a>
+			</li>
+		{% endfor %}
+	</ul>
+	<span class="menu-click menu-hide">свернуть</span>
+</div>

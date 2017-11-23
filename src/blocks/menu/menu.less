@@ -1,0 +1,76 @@
+.menu {
+	background: #d8e5ee;
+	box-shadow: inset ;
+	width: 280px;
+	text-align: center;
+	padding: 20px 0;
+	box-shadow: inset 0px 0px 50px 3px #afc7d3;
+	border-bottom: 2px solid #2a4c56;
+	margin: 15px;
+
+	&-list,
+	&-hidden {
+		padding-right: 20px;
+		padding-left: 20px;
+
+		&__item {
+			margin-bottom: 18px;
+			border-bottom: 1px solid #abb8c1;
+			padding-bottom: 1px;
+
+			&:last-child {
+				border-bottom: none;
+			}
+
+			&-link {
+				color: #6c2f57;
+				text-transform: uppercase;
+				text-decoration: none;
+				font-size: 14px;
+			}
+
+			&-icon {
+				background: url(../images/horn.png) 11% 4% no-repeat;
+			}
+		}
+	}
+
+	&-hidden {
+		padding-top: 0;
+		display: none;
+	}
+
+	&-show,
+	&-hide {
+		position: relative;
+
+		&:before {
+			position: absolute;
+			content: '';
+			width: 12px;
+			height: 12px;
+			left: 50%;
+			margin-left: -10px;
+			transform: rotate(45deg);
+		}
+	}
+
+	&-hide {
+		display: none;
+	}
+
+	&-show:before {
+		background: #d8e5ee;		
+		box-shadow: inset -2px -2px 7px 1px #b4ccd8;
+		border-right: 2px solid #2a4c56;
+		border-bottom: 2px solid #2a4c56;
+		top: 36px;
+	}
+
+	&-hide:before {
+		background: #fff;
+		border-left: 2px solid #2a4c56;
+		border-top: 2px solid #2a4c56;
+		top: 35px;
+	}
+}

@@ -1,0 +1,108 @@
+{% set newonsite = [
+	{
+		"link": "./projects/item1",
+		"title": "1312...",
+		"number": "26",
+		"type": "project",
+		"add": "Добавлен проект 26 октября 2017",
+		"img": "./images/index.png",
+		"alt": "Первая новость"
+	},
+	{
+		"link": "./projects/item2",
+		"title": "565...",
+		"number": "25",
+		"type": "project",
+		"add": "Добавлен проект 26 октября 2017",
+		"img": "./images/noimage.png",
+		"alt": "Первая новость"
+	},
+	{
+		"link": "./news/item/2",
+		"title": "ава...",
+		"number": "17",
+		"type": "news",
+		"add": "Добавлена новость 17 июля 2017",
+		"img": "./images/noimage.png",
+		"alt": "Первая новость"
+	},
+	{
+		"link": "./news/item/2",
+		"title": "Новый альбом",
+		"number": "13",
+		"type": "album",
+		"add": "Добавлен альбом 17 июля 2017",
+		"img": "./images/noimage.png",
+		"alt": "Первая новость",
+		"addclass": "hidden"
+	},
+	{
+		"link": "./news/item/2",
+		"title": "Ремонт садика",
+		"number": "45",
+		"type": "event",
+		"add": "Добавлено событие 17 июля 2017",
+		"img": "./images/noimage.png",
+		"alt": "Первая новость",
+		"addclass": "hidden"
+	},
+	{
+		"link": "./news/item/2",
+		"title": "ава...",
+		"number": "31",
+		"type": "news",
+		"add": "Добавлена новость 17 июля 2017",
+		"img": "./images/noimage.png",
+		"alt": "Первая новость",
+		"addclass": "hidden"
+	},
+	{
+		"link": "./news/item/2",
+		"title": "ава...",
+		"number": "17",
+		"type": "news",
+		"add": "Добавлена новость 17 июля 2017",
+		"img": "./images/noimage.png",
+		"alt": "Первая новость",
+		"addclass": "hidden"
+	},
+	{
+		"link": "./news/item/2",
+		"title": "ава...",
+		"number": "17",
+		"type": "news",
+		"add": "Добавлена новость 17 июля 2017",
+		"img": "./images/noimage.png",
+		"alt": "Первая новость",
+		"addclass": "hidden"
+	}
+
+]%}
+
+<div class="newonsite end-line">
+	<div class="newonsite-title title">
+		<h2>Новое на сайте</h2>
+	</div>
+</div>
+<ul class="newonsite-list">
+	{% for item in newonsite %}
+		<li class="newonsite-list__item{% if item.addclass %} newonsite-list__item-{{item.addclass}}{% endif %}">
+			<img class="newonsite-list__img" src="{{item.img}}" alt="{{item.alt}}">
+			<div class="newonsite-announce">
+				<a class="newonsite-link" href="{{item.link}}">
+					<span class="newonsite-link__title title">{{item.title}}</span>
+				</a>
+				<div class="newonsite-date">
+					<span class="newonsite-number">{{item.number}}</span>
+					<span class="newonsite-type{% if item.type %} newonsite-type__{{item.type}}{% endif %}"></span>
+					<span class="newonsite-add">{{item.add}}</span>
+				</div>
+			</div>
+		</li>
+	{% endfor %}
+</ul>
+<div class="newonsite-list__item-show">
+	<span>
+		Более ранние обновления
+	</span>
+</div>
